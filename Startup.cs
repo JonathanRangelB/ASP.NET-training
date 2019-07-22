@@ -56,7 +56,7 @@ namespace Fundamentos_ASP.NetCore
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=Escuela}/{action=Index}/{id?}"); //esta linea nos indica que al accesar a nuestra pagina, Escuela sera en controller por defecto y que el index sera la vista por defecto de nuestra pagina al momento de ejecutarla
             });
         }
     }

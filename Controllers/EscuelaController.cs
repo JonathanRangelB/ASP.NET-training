@@ -12,6 +12,8 @@ namespace Fundamentos_ASP.NetCore.Controllers
             escuela.AñoFundacion = 2005;
             escuela.EscuelaId = Guid.NewGuid().ToString();
             escuela.Nombre = "Platzi School";
+
+            ViewBag.CualquierCosa = "Valor cualquiera";
             return View(escuela);
         }
     }
