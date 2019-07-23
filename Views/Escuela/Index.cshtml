@@ -1,5 +1,4 @@
 ﻿<!-- Con esto forzamos a que el modelo, que es el objeto que recibe siempre como parametro la vista, sea de tipo Escuela, haciendolo fuertemente tipado, para cuando el compilador haga su trabajo, nos diga si hay problemas en compilacion para evitar problemas en ejecucion-->
-
 @Model Escuela
 
 @{
@@ -7,9 +6,9 @@
     Layout = "_Simple"; <!-- Esta linea le dice que use el template que se encuentra en la carpeta shared, y como no le ponemos extension, asume que es un *.cshtml-->
 }
 
-<h1>Escuela</h1>
+<h1>Escuela @ViewData["Title"]</h1>
 <h2>Nombre: @Model.Nombre</h2>
-<p><strong>Año Fundacion: @Model.AñoFundacion </strong></p>
+<p><strong>Año Fundacion: @Model.AñoDeCreación </strong></p>
 
 <!-- Aqui 2 ejemplos de como podemos acceder a los valores mandados desde el controlador, el primero hace uso del ViewBag directamente, que es el atributo dinamico que siempre se manda desde el controlador, la segunda manera de hacer esto es con el ViewData que se definio mas arriba en la sentencia razor como si fuera un diccionario cualquiera-->
 <p>Cosa dinamica de cualquier tipo @ViewBag.CualquierCosa</p>
